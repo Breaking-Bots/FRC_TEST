@@ -8,6 +8,7 @@ public abstract class CommandBase extends Command {
 	public static OI oi;
 	
 	public static TestSubsystem testSubsystem = new TestSubsystem();
+	public static Claw claw = new Claw();
 	
 	public static void init(){
 		oi = new OI();
