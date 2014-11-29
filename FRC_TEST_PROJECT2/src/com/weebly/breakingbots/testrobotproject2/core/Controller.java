@@ -9,6 +9,9 @@ public abstract class Controller extends GenericHID implements IInputOutput{
 	protected DriverStation driverStation;
 	protected final int port;
 	
+	private double deadZone;
+	private double triggerDeadZone;
+	
 	protected Controller(int port) {
 		super();
 		this.port = port;
@@ -33,9 +36,11 @@ public abstract class Controller extends GenericHID implements IInputOutput{
 	
 	public final double getX(Hand hand) {
 		if(hand.value == Hand.kRight.value) {
-            return getAxis(AxisType.RX);
+			double value = getAxis(AxisType.RX);
+            return (Math.abs(value) >= deadZone? value : 0);
         } else if(hand.value == Hand.kLeft.value) {
-            return getAxis(AxisType.LX);
+        	double value = getAxis(AxisType.LX);
+            return (Math.abs(value) >= deadZone? value : 0);
         } else {
             return 0;
         }
@@ -43,9 +48,11 @@ public abstract class Controller extends GenericHID implements IInputOutput{
 
 	public final double getY(Hand hand) {
 		if(hand.value == Hand.kRight.value) {
-            return getAxis(AxisType.RY);
+			double value = getAxis(AxisType.RY);
+            return (Math.abs(value) >= deadZone? value : 0);
         } else if(hand.value == Hand.kLeft.value) {
-            return getAxis(AxisType.LY);
+        	double value = getAxis(AxisType.LY);
+            return (Math.abs(value) >= deadZone? value : 0);
         } else {
             return 0;
         }
@@ -75,4 +82,20 @@ public abstract class Controller extends GenericHID implements IInputOutput{
 	public abstract boolean getBumper(Hand hand);
 
 	public abstract boolean getRawButton(int button);
+
+	public double getDeadZone() {
+		return deadZone;
+	}
+
+	public void setDeadZone(double deadZone) {
+		this.deadZone = deadZone;
+	}
+
+	public double getTriggerDeadZone() {
+		return triggerDeadZone;
+	}
+
+	public void setTriggerDeadZone(double triggerDeadZone) {
+		this.triggerDeadZone = triggerDeadZone;
+	}
 }

@@ -69,7 +69,7 @@ public class XboxController extends Controller{
 
 	public boolean getRawButton(int button) {
 		  if(button == RT.iterative()) { 
-	            if(getThrottle() <= -.6) {
+	            if(getThrottle() <= -getTriggerDeadZone()) {
 	                return true;
 	            }
 	            else {
@@ -77,7 +77,7 @@ public class XboxController extends Controller{
 	            }
 	        }
 	        if(button == LT.iterative()) { 
-	            if(getThrottle() >= .6) {
+	            if(getThrottle() >= getTriggerDeadZone()) {
 	                return true;
 	            }
 	            else {

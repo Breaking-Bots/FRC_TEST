@@ -72,7 +72,7 @@ public class PSController extends Controller {
 
 	public boolean getRawButton(int button) {
 		if(button == R2.iterative()) { 
-            if(getThrottle() <= -.6) {
+            if(getThrottle() <= -0.6) {
                 return true;
             }
             else {
@@ -80,7 +80,7 @@ public class PSController extends Controller {
             }
         }
         if(button == L2.iterative()) { 
-            if(getThrottle() >= .6) {
+            if(getThrottle() >= 0.6) {
                 return true;
             }
             else {
