@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="var" path="NETWORKABLES_CRIO" sourcepath="/NETWORKABLES_CRIO_SRC">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/F:/FRC/Sunspot/sunspotfrcsdk/doc/javadoc.zip!/javadoc"/>
+			<attribute name="javadoc_location" value="jar:file:/H:/FRC/Sunspot/sunspotfrcsdk/doc/javadoc.zip!/javadoc"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="SQUAWK">
@@ -14,7 +14,7 @@
 	</classpathentry>
 	<classpathentry kind="var" path="WPILIBJ" sourcepath="/WPILIBJ_SRC">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/F:/FRC/Sunspot/sunspotfrcsdk/doc/javadoc.zip!/javadoc"/>
+			<attribute name="javadoc_location" value="jar:file:/H:/FRC/Sunspot/sunspotfrcsdk/doc/javadoc.zip!/javadoc"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
