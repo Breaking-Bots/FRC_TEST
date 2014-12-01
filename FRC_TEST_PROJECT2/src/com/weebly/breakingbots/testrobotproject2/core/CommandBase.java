@@ -9,9 +9,10 @@ public abstract class CommandBase extends Command {
 	
 	public static TestSubsystem testSubsystem = new TestSubsystem();
 	public static Claw claw = new Claw();
+	public static DriveTrain driveTrain = new DriveTrain(oi.controller);
 	
 	public static void init(){
-		oi = new OI();
+		oi = OI.getInstance();
 		
 		SmartDashboard.putData(testSubsystem);
 	}
