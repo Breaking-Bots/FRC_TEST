@@ -1,9 +1,10 @@
 package com.weebly.breakingbots.testrobotproject2.core;
 
+import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.Trigger;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class ControllerButton extends Trigger {
+public class ControllerButton extends Button {
 
 	private Controller controller;
 	private int mappedNumber;
@@ -18,15 +19,15 @@ public class ControllerButton extends Trigger {
 	}
 	
 	public void tapped(final Command command){
-		whenActive(command);
+		whenPressed(command);
 	}
 	
 	public void held(final Command command){
-		whileActive(command);
+		whileHeld(command);
 	}
 	
 	public void released(final Command command){
-		whenInactive(command);
+		whenReleased(command);
 	}
 	
 	public int iterative(){
